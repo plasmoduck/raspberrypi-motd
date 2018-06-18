@@ -8,7 +8,7 @@ motd
 </p>
 
 Written in bash and tested with the Raspbian distribution.
-```
+
 Just clone the repositoy `git clone https://github.com/plasmoduck/raspberrypi-motd/` then set the execution permissions and change the owner:
 ```bash
 $ sudo chown root:root motd.sh
