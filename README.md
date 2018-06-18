@@ -7,13 +7,14 @@ motd
   <img src="https://github.com/gagle/raspberrypi-motd/blob/master/motd.png?raw=true"/>
 </p>
 
-Written in bash, no need to install any package. Tested with the Raspbian distribution.
+Written in bash and tested with the Raspbian distribution.
 ```
 Just clone the repositoy `git clone https://github.com/plasmoduck/raspberrypi-motd/` then set the execution permissions and change the owner:
 ```bash
 $ sudo chown root:root motd.sh
 $ sudo chmod +x motd.sh
 ``` 
+
 
 ```
 - Autoexecute the script when the user logs in via a tty console or ssh
