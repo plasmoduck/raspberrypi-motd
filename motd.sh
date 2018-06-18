@@ -68,8 +68,8 @@ function sec2time (){
 borderColor=35
 headerLeafColor=32
 headerRaspberryColor=31
-greetingsColor=36
-statsLabelColor=33
+greetingsColor=32
+statsLabelColor=31
 
 borderLine="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 borderTopLine=$(color $borderColor "┏$borderLine┓")
@@ -125,7 +125,7 @@ label3="$(extend "$(free -m | awk 'NR==2 { printf "Total: %sMB, Used: %sMB, Free
 label3="$borderBar  $(color $statsLabelColor "Memory........:") $label3$borderBar"
 
 label4="$(extend "$(df -h ~ | awk 'NR==2 { printf "Total: %sB, Used: %sB, Free: %sB",$2,$3,$4; }')")"
-label4="$borderBar  $(color $statsLabelColor "Home space....:") $label4$borderBar"
+label4="$borderBar  $(color $statsLabelColor "Disk usage....:") $label4$borderBar"
 
 label5="$(extend "$(/opt/vc/bin/vcgencmd measure_temp | cut -c "6-9")ºC")"
 label5="$borderBar  $(color $statsLabelColor "Temperature...:") $label5$borderBar"
