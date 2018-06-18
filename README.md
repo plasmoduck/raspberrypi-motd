@@ -7,16 +7,16 @@ motd
   <img src="https://github.com/gagle/raspberrypi-motd/blob/master/motd.png?raw=true"/>
 </p>
 
-Written in pure Bash. No need to install any package. Tested with the Arch Linux ARM and Raspbian distributions.
-
-Download and save the `motd.sh` bash script in the Raspberry Pi. Remember to add execution permissions and change the owner:
-
+Written in bash, no need to install any package. Tested with the Raspbian distribution.
+```
+Just clone the repositoy `git clone https://github.com/plasmoduck/raspberrypi-motd/` then set the execution permissions and change the owner:
 ```bash
 $ sudo chown root:root motd.sh
 $ sudo chmod +x motd.sh
-```
+``` 
 
-- Autoexecute the script when the user logs in via tty or ssh
+```
+- Autoexecute the script when the user logs in via a tty console or ssh
 
 I found that the previous method of placing the script in `/etc/profile.d/` leads to the desktop login manager getting stuck in an endless loop asking for password in Raspbian.
 
