@@ -15,7 +15,6 @@ $ sudo chown root:root motd.sh
 $ sudo chmod +x motd.sh
 ``` 
 
-````
 - Autoexecute the script when the user logs in via a tty console or ssh
 
 I found that the previous method of placing the script in `/etc/profile.d/` leads to the desktop login manager getting stuck in an endless loop asking for password in Raspbian.
