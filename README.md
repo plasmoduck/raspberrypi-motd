@@ -49,7 +49,7 @@ Be sure to remove the default MOTD.
   Restart the `sshd` service:
   
   ```bash
-  $ sudo systemctl restart sshd
+  $ sudo /etc/init.d ssh restart
   ```
 
-Note: If you don't see the degree Celsius character correctly (`º`) make sure you have enabled a UTF8 locale ([Arch Linux locales](https://wiki.archlinux.org/index.php/locale)).
+Note: If you don't see the degree Celsius character correctly (`º`) make sure you have enabled a UTF8 locale.
