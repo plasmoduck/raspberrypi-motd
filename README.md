@@ -16,11 +16,13 @@ $ sudo chown root:root motd.sh
 $ sudo chmod +x motd.sh
 ```
 
-The following steps may vary depending on the OS. Arch Linux ARM is assumed.
+- Autoexecute the script when the user logs in via tty or ssh
 
-- Autoexecute the script when the user logs in. There are multiple locations from where you can start the `motd.sh` script, for example using the `/etc/profile`. Save the `motd.sh` script in the directory `/etc/profile.d` and it will be executed after the login. More about [autostarting scripts](https://wiki.archlinux.org/index.php/Bash#Configuration_file_sourcing_order_at_startup).
+I found that the previous method of placing the script in `/etc/profile.d/` leads to the desktop login manager getting stuck in an endless loop asking for password in Raspbian.
 
-- Remove the default MOTD. It is located in `/etc/motd`.
+However, the script `motd.sh` should not be exicuted by placing in `/etc/profile`. The correct method is to source the `motd.sh` script in the file `~/.profile` and it will be executed after the login.
+
+Be sure to remove the default MOTD. It is located in `/etc/motd`.
   
   ```bash
   $ sudo rm /etc/motd
