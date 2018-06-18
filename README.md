@@ -15,7 +15,6 @@ $ sudo chown root:root motd.sh
 $ sudo chmod +x motd.sh
 ``` 
 
-
 ```
 - Autoexecute the script when the user logs in via a tty console or ssh
 
