@@ -20,15 +20,15 @@ sudo chmod +x motd.sh
 
 I found that the previous method of placing the script in `/etc/profile.d/` leads to the desktop login manager getting stuck in an endless loop asking for password in Raspbian.
 
-However, the script `motd.sh` should not be exicuted by placing in `/etc/profile`. The correct method is to source the `motd.sh` script in the file `~/.profile` and it will be executed after the login.
+However, the script `motd.sh` should not be exicuted by placing in `/etc/profile`. The correct method is to source the `motd.sh` script in the file `~/.profile` by placing a link to it at the end of the file like `/path/to/motd.sh` and it will be executed after login.
 
-Be sure to remove the default MOTD. It is located in `/etc/motd`.
+Be sure to remove the default MOTD.
   
   ```bash
   $ sudo rm /etc/motd
   ```
   
-- Remove the "last login" information. Disable the `PrintLastLog` option from the `sshd` service. Edit the `/etc/ssh/sshd_config` file and uncomment the line `#PrintLastLog yes`:
+- You can remove the "last login" information. However it is considered a security risk. If you wish to do so, you should disable the `PrintLastLog` option from the `sshd` service. Edit the `/etc/ssh/sshd_config` file and uncomment the line `#PrintLastLog yes`:
   
   ```bash
   $ sudo nano /etc/ssh/sshd_config
