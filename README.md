@@ -51,5 +51,6 @@ Be sure to remove the default MOTD.
   ```bash
   $ sudo /etc/init.d ssh restart
   ```
+Now simply SSH into the Pi and see the beautiful MOTD. Have fun =)
 
 Note: If you don't see the degree Celsius character correctly (`º`) make sure you have enabled a UTF8 locale.
